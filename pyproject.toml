@@ -5,9 +5,10 @@ description = "Automated Wikipedia Speed Runner"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "google-genai>=1.52.0",
     "numpy>=2.3.5",
-    "ollama>=0.6.1",
     "playwright>=1.56.0",
+    "python-dotenv>=1.2.1",
     "sentence-transformers>=5.1.2",
     "wikipedia-api>=0.8.1",
 ]
