@@ -1,8 +1,10 @@
+import os
+import json
 from google import genai
 from google.genai import types
 from dotenv import load_dotenv
+
 from players.player import Player
-import os, json
 
 class PlayerLLM(Player):
     def __init__(self, llm_model="gemini-2.5-flash", temperature=0.5):
@@ -15,8 +17,6 @@ class PlayerLLM(Player):
         self.client = genai.Client(api_key=api_key)
         self.llm_model = llm_model
         self.temperature = temperature
-
-        print(f"[GEMINI] Player using {llm_model}")
 
     def choose_next_link(self, cur, tar, links, target_desc):
         if not links:
