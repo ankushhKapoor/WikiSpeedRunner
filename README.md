@@ -3,6 +3,14 @@
 This project plays the **Wikipedia Speedrun game** automatically.  
 The goal: reach a target Wikipedia page from a starting page using **only in-page links** - no search, no URL edits, no going back, no cheating.
 
+<br/>
+
+<div align="center">
+<img src="https://github.com/ankushhKapoor/WikiSpeedRunner/blob/main/assets/WikiSpeedRunner-UI.gif" align="center" style="width: 90%" />
+</div>
+
+<br/>
+
 Two play modes:
 
 - **WikiSpeedRunner** → SBERT Vector mode
