@@ -7,13 +7,13 @@ from core.wiki_client import WikiClient
 from players.sbert_vectorized import PlayerSBERTVectorized
 from players.llm import PlayerLLM
 
-START_PAGE = "Cat"
+START_PAGE = "Dog"
 TARGET_PAGE = "Linux"
 TARGET_DESC = "Linux is a family of open-source, Unix-like operating systems that manage computer hardware and software."
 HISTORY_FILE = "history.json"
 
 # Choose: "vector" or "llm"
-PLAYER_TYPE = "llm"
+PLAYER_TYPE = "vector"
 
 # UI ON(True)/OFF(False)
 USE_BROWSER = False
@@ -96,11 +96,11 @@ def run_speedrun():
             next_page = player.choose_next_link(current, TARGET_PAGE, links, wiki)
         else:
             next_page = player.choose_next_link(current, TARGET_PAGE, links, TARGET_DESC)
-        current = next_page
+        current = next_page.replace(" ", "_")
         visited.append(current)
 
         if browser:
-            browser.click_link_to(next_page)
+            browser.click_link_to(current)
 
     end_time = time.perf_counter()
     total_time = round(end_time - start_time, 4)
