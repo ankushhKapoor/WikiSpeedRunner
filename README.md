@@ -156,9 +156,3 @@ Compare runs to see whether **speed (SBERT)** or **efficiency (LLM)** wins.
 ## Inspiration
 
 This project is inspired by a **Green Code** YouTube video [I Forced AI to Speedrun Wikipedia](https://youtu.be/JvoUHe1OR68?si=Yeo5_a97neHvDOgh) demonstrating an AI solving Wikipedia speedruns.
-This version expands the idea into a full playable system with:
-
-* SBERT-based semantic navigation
-* Gemini-based reasoning navigation
-* optional browser UI
-* persistent run history
